@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- flex가 아닌 grid 도 공부해보자 -->
+    <!-- flex전제조건: 부모 자식이 있어야 한다, dixplay 프로퍼티에 flex를 줘야한다 -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      .container {
+        border: 5px solid blue;
+        height: 300px;
+        display: flex;
+        flex-direction: column; /* 방향을 column으로 주면 밑으로 내려간다 */
+      }
+      .box {
+        border: 1px solid black;
+        flex: 1; /* 자식의 flex를 1로 주면, 1:1:1로 나누어지더라 */
+      }
+      .box1 {
+        flex: 1;
+      }
+      .box2 {
+        flex: 2;
+      }
+      .box3 {
+        flex: 1;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box box1">1</div>
+      <div class="box box2">2</div>
+      <div class="box box3">3</div>
+    </div>
+  </body>
+</html>

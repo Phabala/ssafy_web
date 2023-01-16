@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      /* 인라인 css가 안의 내용물의 크기에 맞춰서 간다. 
+      블록, 인라인, 인라인 블록
+      모든 태그는 세가지 중의 하나다.
+      굳이 외우고 있을 필요는 없다.
+      div로 해결하는게 속 편할 때 도 있다.
+      */
+      span {
+        border: 1px solid black;
+        height: 100px;
+      }
+      div {
+        border: 1px solid black;
+      }
+      .container {
+        border: 2px solid aqua;
+        width: 200px;
+      }
+      .box {
+        border: 1px solid black;
+        /* height: 100px; */
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <span>111</span>
+    <span>222</span>
+    <span>333</span>
+    <a href="">여기를 눌러라</a>
+    <br /><br />
+    <div class="container">
+      <div class="box">111</div>
+      <div class="box">222</div>
+      <div class="box">333</div>
+    </div>
+  </body>
+</html>
