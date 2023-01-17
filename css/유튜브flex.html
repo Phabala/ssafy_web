@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      .flex-wrapper {
+        display: flex;
+        height: 200px;
+        /* justify-content
+      메인 축에 대한 정렬 */
+        /* align-items default stretch 
+        메인 축에 대한 교차축 정렬*/
+        /* flex-direction: column */
+      }
+      div {
+        border: 1px solid black;
+      }
+      .a {
+        /* 자식 속성에 활용 */
+        flex: 1;
+      }
+      .b {
+        flex: 3;
+      }
+      .c {
+        flex: 1;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="flex-wrapper">
+      <div class="a">a</div>
+      <div class="b">b</div>
+      <div class="c">c</div>
+    </div>
+  </body>
+</html>
