@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=\, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .background {
+        background-image: url("./nomad.jpg");
+        border-radius: 25px;
+        width: 400px;
+        height: 300px;
+        background-size: cover;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: row;
+        text-align: center;
+      }
+      .circle {
+        width: 75px;
+        height: 75px;
+        border-radius: 50%; /* 원으로 만들기 border-radius 50% 시험에 나온다*/
+        border: 3px solid yellow;
+      }
+      .blank {
+        flex: 1;
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- position relative 사용 -->
+    <!-- 렐러티브는 굴러봐야된다 -->
+    <div class="background">
+      <div class="blank"></div>
+      <div class="circle"></div>
+      <div class="blank">노마드 코더</div>
+    </div>
+  </body>
+</html>

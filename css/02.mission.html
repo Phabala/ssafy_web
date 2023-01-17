@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        background-color: orange;
+        width: 600px;
+        height: 400px;
+        display: flex;
+        justify-content: space-around; /* space-between, space-around 등 */ /* 부모에 준게 핵심. j-c는 괄호 */
+        flex-wrap: wrap;
+        align-items: center;
+      }
+      .image-wrapper {
+        width: 275px;
+        height: 170px;
+        border-radius: 20%;
+        background-size: cover;
+        display: flex;
+      }
+
+      .one,
+      .two {
+        background-image: url("./badook.png");
+      }
+
+      .three,
+      .four {
+        background-image: url("./cat.png");
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="image-wrapper one"></div>
+      <div class="image-wrapper two"></div>
+      <div class="image-wrapper three"></div>
+      <div class="image-wrapper four"></div>
+    </div>
+    <!-- flex의 wrap -->
+  </body>
+</html>
