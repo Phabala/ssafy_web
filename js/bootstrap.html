@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- css cdn 넣어야함-->
+    <!-- 부트스트랩은 이마트 같은 것. 너무 깊게 공부하거나 의존하지 말자. 이마트 같이 찾을거 찾으면 끝 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <style>
+      .btn-big {
+        width: 300px;
+      }
+      .btn-small {
+        width: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- js cdn 넣어야함, script 위치 주의 -->
+    <button type="button" class="btn btn-primary btn-big">Primary</button>
+    <button type="button" class="btn btn-light btn-small">Light</button>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      const btnBig = document.querySelector(".btn-big");
+      const btnSmall = document.querySelector(".btn-small");
+
+      btnBig.addEventListener("click", () => {
+        alert("HI");
+      });
+
+      btnSmall.addEventListener("click", (e) => {
+        // if (btnSmall.classList.) 얘는 좀 나중에 붙이자 (if small, replace big)
+        btnSmall.classList.replace("btn-small", "btn-big");
+      });
+
+      btnSmall.addEventListener("click", (e) => {
+        btnSmall.classList.replace("btn-big", "btn-small");
+      });
+    </script>
+  </body>
+</html>

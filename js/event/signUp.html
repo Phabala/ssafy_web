@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>회원가입</h1>
+    <input class="id" type="text" placeholder="아이디" /><br />
+    <input class="pw" type="text" placeholder="비밀번호" /><br /><br />
+    <button class="submit">회원가입하기</button>
+    <script>
+      const button = document.querySelector("button");
+      const id = document.querySelector("input.id");
+      const pw = document.querySelector("input.pw");
+
+      let id_ck = 0;
+      let pw_ck = 0;
+
+      id.addEventListener("keydown", function (e) {
+        if (e.target.value == "") {
+          id_ck = 0;
+        } else {
+          id_ck = 1;
+        }
+        console.log("id_ck: ", id_ck);
+        console.log("e.target.value: ", e.target.value);
+      });
+
+      pw.addEventListener("keydown", function (e) {
+        // 쿼리 셀렉터의 벨류나, 이벤트 타겟 벨류냐 이게 비동기 문제를 가른다.
+        if (e.target.value == "") {
+          pw_ck = 0;
+        } else {
+          pw_ck = 1;
+        }
+        console.log(pw_ck);
+      });
+
+      button.addEventListener("click", function (e) {
+        if (!id_ck) {
+          alert("아이디를 입력하세요");
+        } else if (!pw_ck) {
+          alert("비밀번호를 입력하세요");
+        } else {
+          alert("회원가입이 완료되었습니다");
+        }
+      });
+    </script>
+  </body>
+</html>

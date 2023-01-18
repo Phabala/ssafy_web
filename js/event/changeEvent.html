@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Change Event</h1>
+    <input type="text" />
+    <div class="result-wrapper"></div>
+    <script>
+      // html 안에서는 대문자를 인식 못함 => 케밥 케이스 (꼬챙이)
+      // JS는 카멜, Python은 스네이크
+      const input = document.querySelector("input");
+      const resultWrapper = document.querySelector(".result-wrapper");
+      input.addEventListener("change", function (event) {
+        console.log(event);
+        resultWrapper.textContent = event.target.value;
+      });
+      // event.target.value 가 바뀜
+      // event는 모든 change의 기록
+    </script>
+  </body>
+</html>
