@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My title</title>
+  </head>
+  <body>
+    <h1>A heading</h1>
+    <a class="mac" href="mcdonald.co.kr">Link Text</a>
+    <script>
+      // querySelector("선택자") class: '.' , id: '#'
+      const h1Tag = document.querySelector("h1");
+      console.log(h1Tag);
+
+      const mac = document.querySelector(".mac");
+      console.log(mac);
+      console.log(mac.textContent);
+      mac.textContent = "맥도날드"; // mac의 textContent가 맥도날드로 바뀜
+      mac.href = "https://www.naver.com";
+    </script>
+  </body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>안녕 나는 자룡이</h1>
+    <div class="container">
+      <div class="img-wrapper">
+        <img src="./jony.jpg" height="300px" alt="자룡이" />
+      </div>
+      <div class="hobby-list">
+        <h2>취미목록</h2>
+        <ul>
+          <li>영화보기</li>
+          <li>코딩하기</li>
+          <li>산책가기</li>
+          <li>게임하기</li>
+          <li>등산가기</li>
+        </ul>
+      </div>
+    </div>
+    <script>
+      // const img = document.querySelector(".img-wrapper > img");
+      // img.src = "./profile.jpg";
+
+      const h1 = document.querySelector("h1");
+      h1.textContent = "안녕 나는 기홍이";
+
+      const imgWrapper = document.querySelector(".img-wrapper");
+      const img = imgWrapper.querySelector("img"); // imgWrapper 도 document 객체이기 때문에, document 객체의 메소드를 쓸 수 있는건가?
+      // 값만 가져온게 아니라 주소를 가져왔기 때문에 querySelector를 쓸 수 있음
+      // 가져온 DOM에서 다 쓸 수 있음.
+      console.dir(imgWrapper);
+      console.log(imgWrapper);
+
+      // body > div > div.img-wrapper > img
+      // div.img-wrapper는 하나밖에 없으므로
+      // .img-wrapper > img만 해도 동작한다
+      // 이 페이지에서는 img만 해도 된다
+
+      // 크롤링 등을 할 때 범위를 어느정도로 할지 잘 생각하면 좋다
+
+      // profile-img-wrapper 등으로 클래스 이름을 지으면 여러 편해질 수 있다
+      const ul = document.querySelectorAll(".hobby-list > ul > li"); // 모든 li를 선택함
+      console.log(ul); // 괄호는 바로 밑의 자식을 찾음
+
+      const ul2 = document.querySelectorAll(".hobby-list li"); // 모든 li를 선택함
+      console.log(ul2); // 밑에서 알아서 찾음 (ul을 없애도 찾음)
+
+      ul[0].textContent = "싸피";
+
+      // 변수에 저장하지 않고 1회성으로 사용
+      document.querySelectorAll(".hobby-list li")[1].textContent = "하하하";
+      console.log(typeof imgWrapper);
+      console.log(typeof img);
+    </script>
+  </body>
+</html>
