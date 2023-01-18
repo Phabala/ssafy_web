@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>이벤트</h1>
+    <button>Click Me!</button>
+    <div>It's Div</div>
+    <script>
+      // 이벤트 하나에 여러개의 콜백을 달 수 있다.
+      function showMessage() {
+        console.log("안녕!!");
+      }
+
+      function showMessage2() {
+        console.log("즐겁다!!");
+      }
+
+      const btn = document.querySelector("button");
+      const div = document.querySelector("div");
+
+      btn.addEventListener("click", showMessage); // param1: 이벤트의 종류
+      btn.addEventListener("click", showMessage2);
+
+      div.addEventListener("click", showMessage);
+
+      // 위에 처럼 쓰는게 쉬운데, 아래처럼 쓰는건 웹 개발자가 일상이라 가르쳐 줌.
+      // 두 번 이상 쓸 일이 하나도 없으면 아래처럼 쓰는 경우가 많다.
+      div.addEventListener("click", function () {
+        console.log("안녕!!");
+      });
+
+      // 가장 정석적인 방식
+      div.addEventListener("click", () => {
+        console.log("안녕!!");
+      });
+    </script>
+  </body>
+</html>
