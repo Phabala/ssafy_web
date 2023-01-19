@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+    <style>
+      .header-nav-list-wrapper > li {
+        margin-left: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- header, nav, margin, section 보여지는건 div랑 똑같다 -->
+    <!-- header -->
+    <header>
+      <nav class="header-nav">
+        <!-- ul.header-nav-list-wrapper>li*3 -->
+        <ul class="header-nav-list-wrapper">
+          <li>Gmail</li>
+          <li>이미지</li>
+          <li>다크모드버튼</li>
+          <button class="toggle-button">다크 모드</button>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- main -->
+    <main class="main-container">
+      <!-- 로고파트 -->
+      <h1>
+        <img class="image-logo" src="./imgs/logo.png" alt="구글 로고" />
+      </h1>
+      <!-- 검색파트 -->
+      <div class="search-container">
+        <input id="search-input" placeholder="Google 검색 또는 URL 입력" />
+        <img src="./imgs/search.png" alt="" class="search-icon" />
+      </div>
+      <!-- 아이콘파트 -->
+      <section class="bookmark-section">
+        <div class="bookmark-wrapper">
+          <!-- a안에 div*2 -->
+          <!-- a.bookmark-item>div*2 -->
+
+          <!-- 반복이 되는 부분 -->
+          <a href="" class="bookmark-item">
+            <div class="img-icon-wrapper">
+              <img src="./imgs/naver.png" alt="" />
+            </div>
+            <div class="bookmark-text">NAVER</div>
+          </a>
+
+          <a href="" class="bookmark-item">
+            <div class="img-icon-wrapper">
+              <img src="./imgs/naver.png" alt="" />
+            </div>
+            <div class="bookmark-text">NAVER</div>
+          </a>
+
+          <a href="" class="bookmark-item">
+            <div class="img-icon-wrapper">
+              <img src="./imgs/naver.png" alt="" />
+            </div>
+            <div class="bookmark-text">NAVER</div>
+          </a>
+
+          <a href="" class="bookmark-item">
+            <div class="img-icon-wrapper">
+              <img src="./imgs/naver.png" alt="" />
+            </div>
+            <div class="bookmark-text">NAVER</div>
+          </a>
+
+          <a href="" class="bookmark-item">
+            <div class="img-icon-wrapper">
+              <img src="./imgs/naver.png" alt="" />
+            </div>
+            <div class="bookmark-text">NAVER</div>
+          </a>
+
+          <a href="" class="bookmark-item">
+            <div class="img-icon-wrapper">
+              <img src="./imgs/naver.png" alt="" />
+            </div>
+            <div class="bookmark-text">NAVER</div>
+          </a>
+
+          <a href="" class="bookmark-item">
+            <div class="img-icon-wrapper">
+              <img src="./imgs/naver.png" alt="" />
+            </div>
+            <div class="bookmark-text">NAVER</div>
+          </a>
+
+          <a href="" class="bookmark-item">
+            <div class="img-icon-wrapper">
+              <img src="./imgs/naver.png" alt="" />
+            </div>
+            <div class="bookmark-text">NAVER</div>
+          </a>
+        </div>
+      </section>
+    </main>
+    <script src="./google.js"></script>
+  </body>
+</html>
