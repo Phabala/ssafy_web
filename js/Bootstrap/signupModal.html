@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <style>
+      .input-group {
+        padding: 0.3rem;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Button trigger modal -->
+    <!-- 내가 이해할 수 있는 코드만 남겨놓는게 좋다 -->
+    <button
+      type="button"
+      class="btn btn-primary"
+      data-bs-toggle="modal"
+      data-bs-target="#signUpModal"
+    >
+      회원가입
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="signUpModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <!-- fs-5 를 안 넣고, css로 해보는건 어떨까? 최대한 내가 알고 있는 선에서 구현하려는 노력 -->
+            <h1 class="modal-title fs-5">회원가입</h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div>Account</div>
+            <div class="input-group">
+              <span class="input-group-text">ID</span>
+              <input type="text" class="form-control" placeholder="ID" />
+            </div>
+            <div class="input-group">
+              <span class="input-group-text">PW</span>
+              <input type="password" class="form-control" placeholder="PW" />
+            </div>
+            <div>User</div>
+            <div class="input-group">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="First Name"
+              />
+              <input type="text" class="form-control" placeholder="Last Name" />
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Email address</label>
+              <input
+                type="email"
+                class="form-control"
+                id="exampleFormControlInput1"
+                placeholder="name@example.com"
+              />
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              취소
+            </button>
+            <button type="button" class="btn btn-primary">가입하기</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
