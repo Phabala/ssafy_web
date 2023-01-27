@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .header {
+        width: 100%;
+        height: 60px;
+        background-color: black;
+      }
+      .image {
+        display: flex;
+        background-size: cover;
+        justify-content: space-between;
+      }
+      .ssafy {
+        height: 100%;
+        background-size: inherit;
+        background-image: url("./images/ssafy_logo.png");
+        height: inherit;
+        width: 110px;
+      }
+      .hamburger {
+        background-image: url("./images/hamburger_btn.png");
+        background-repeat: no-repeat;
+        background-size: auto;
+        width: 70px;
+        height: 100%;
+        position: relative;
+        top: 11px;
+      }
+      .banner {
+        width: 100%;
+        height: 800%;
+        background-image: url("./images/ssafy_banner.png");
+        background-size: cover;
+      }
+      .footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <div class="header image">
+        <div class="image ssafy"></div>
+        <div class="image hamburger"></div>
+      </div>
+      <div class="banner"></div>
+      <h1 style="font-weight: normal; margin-bottom: -0.5em; margin-top: 0.3em">
+        삼성청년 SW아카데미
+      </h1>
+      <h1>대한민국 SW의 미래를 이끕니다.</h1>
+      <h3>
+        삼성의 SW 교육 경험과 고용노동부의 취업 지원 노하우를 바탕으로, 취업
+        준비생에게 SW 역량 향상 교육 및 다양한 취업지원 서비스를 제공하여 취업에
+        성공하도록 돕는 프로그램입니다
+      </h3>
+      <p>
+        본 교육과정은 삼성이 주관하고 고용노동부가 후원하며, 아이들과 미래재단이
+        함께합니다.<br />(교육운영은 멀티캠퍼스에서 실시)
+      </p>
+      <div class="footer">
+        <span><strong>주관</strong></span>
+        <img src="./images/multicampus_logo.png" style="height: 100%" />
+        <span><strong>후원</strong></span>
+        <img src="./images/mob_logo_moel.png" style="height: 100%" />
+      </div>
+    </div>
+  </body>
+</html>
