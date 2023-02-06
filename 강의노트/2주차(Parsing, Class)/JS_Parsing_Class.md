@@ -126,3 +126,32 @@ const g2 = a.indexOf("HELLO", 6);
 
 console.log(g2);
 ```
+
+# 함수의 표현식
+
+## 함수 표현식
+
+**변수의 호이스팅을 받는다**
+`const a = function() {
+    console.log("aa");
+}`
+
+## 화살표 함수
+`const b = () => {console.log("bb")};`
+`const c = () => console.log("cc");`
+
+```js
+const sum = (a, b) => { return a + b };
+
+sum(3, 4);
+
+//return이 생략된 형태로 가능
+const sum2 = (a, b) => a + b;
+sum2(3, 4);
+```
+
+**이후 함수 관련 필기는 생략한다**
+
+# 자바스크립트 설명
+JAVA는 객체지향 언어, 클래스 지향
+JavaScript는 멀티패러다임언어 (함수형, 객체지향, 프로토타입 기반)
