@@ -444,3 +444,38 @@ console.log(getValues("id"));
 console.log(getValues("text"));
 console.log(getValues("done"));
 ```
+
+## slice, splice (시험에 나옴)
+slice: 원본 배열이 손상되지 않음
+splice: 원본 배열이 손상됨
+> splice는 보통 쓰지는 않지만, 원하는 값을 삭제하고 싶을 때 쓰기 좋다.
+
+```js
+const names = ["jony", "sylvie", "nana"];
+
+// slice
+const newNames = names.slice(1, 2); // (st인덱스, end인덱스)
+// 원본 배열이 손상되지 않음.
+console.log(names);
+console.log(newNames);
+```
+
+```js
+const names = ["jony", "sylvie", "nana"];
+
+// splice
+const newNames = names.splice(1, 2); // (index(add/remove), howmany, item1, item2...)
+
+// 원본 배열이 손상됨
+console.log(names);
+console.log(newNames);
+```
+
+`splice()`를 활용한 특정 item 지우기
+> 게시판에서 삭제 버튼을 누르면 배열에서 지우는 기능 등에 활용
+```js
+var index = array.indexOf(item);
+if (index !== -1) {
+  array.splice(index, 1);
+}
+```
