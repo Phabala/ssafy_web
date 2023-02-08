@@ -30,8 +30,10 @@
         <input type="password" id="password2" />
         <span id="warning2" class="warning-message"></span>
       </div>
-
-      <button>Signup</button>
+      <!-- 버튼에는 submit 타입이 자동으로 달려있기 때문에 버튼을 누르면 submit이 됨.
+      submit 되면 페이지가 새로고침 됨. 
+      타입을 submit으로 하고서도 이벤트를 막고 싶다면 e.preventDefault() 를 넣어줘야 함.-->
+      <button type="button">Signup</button>
     </form>
 
     <script>
@@ -50,7 +52,7 @@
         (warn2.innerText = "비밀번호가 일치하지 않습니다.");
       const clearIsSame = () => (warn2.innerText = "");
 
-      const ckPassword = () => {
+      const ckPassword = (e) => {
         // 8자 넘는지 체크
         if (pw1.value.length < 8) warnLen();
         else clearLen();
@@ -58,6 +60,10 @@
         // 두 비밀번호 같은지 체크
         if (pw1.value !== pw2.value) warnIsSame();
         else clearIsSame();
+
+        // 만약 button의 타입이 submit이라면
+        e.preventDefault();
+        // 을 넣어줘야 함.
       };
 
       // addEventListener

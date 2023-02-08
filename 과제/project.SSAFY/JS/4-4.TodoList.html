@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .done {
+        text-decoration: line-through;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <input type="text" />
+      <button type="button">Todo</button>
+    </form>
+    <ul></ul>
+
+    <script>
+      const button = document.querySelector("button");
+      const input = document.querySelector("input");
+      const ul = document.querySelector("ul");
+      const x_btns = document.querySelectorAll(".x_btn");
+
+      function addTodo(event) {
+        const val = input.value;
+        if (val === "") {
+          alert("데이터를 입력 해주세요!");
+          return;
+        }
+        const li = document.createElement("li");
+        const x_btn = document.createElement("button");
+        x_btn.setAttribute("class", "x_btn");
+        x_btn.innerText = "X";
+        li.innerText = val;
+        li.append(x_btn);
+        ul.append(li);
+
+        x_btn.addEventListener("click", function () {
+          li.style.textDecoration = "line-through";
+        });
+
+        input.value = "";
+
+        // 이벤트를 취소한다.
+        // 입력 element를 찾고 해당 입력 element의 value 값을 저장한다.
+        // li element를 생성 후 input element의 value 값을 데이터로 저장한다
+        // ul 태그의 자식 태그로 위에서 생성한 li element를 넣는다.
+        // 삭제 버튼을 생성 후 li 태그의 자식 태그로 넣는다.
+        // 삭제 버튼을 클릭하면 해당 li element를 삭제한다
+        // li element를 클릭하면 취소선이 토글된다.
+      }
+      button.addEventListener("click", addTodo);
+    </script>
+  </body>
+</html>
