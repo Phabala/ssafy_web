@@ -22,7 +22,6 @@
       const button = document.querySelector("button");
       const input = document.querySelector("input");
       const ul = document.querySelector("ul");
-      const x_btns = document.querySelectorAll(".x_btn");
 
       function addTodo(event) {
         const val = input.value;
@@ -40,6 +39,9 @@
 
         x_btn.addEventListener("click", function () {
           li.style.textDecoration = "line-through";
+        });
+        x_btn.addEventListener("dblclick", function () {
+          li.remove();
         });
 
         input.value = "";
