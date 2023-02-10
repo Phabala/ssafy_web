@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      img {
+        height: 500px;
+      }
+    </style>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.3.2/axios.js"
+      integrity="sha512-9JZfp0g+DImom5Z/xNmIXW55czwHWQjf9Wyyw209+k3vjBLF+yb54Rsk5mMwE9HTpUhxYTocgniAlgf94qi1Tg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
+  <body>
+    <h1>Dog API</h1>
+    <img draggable="false" src="./imgs/noResult.png" alt="dog" />
+    <h2>아직 선택된 사진이 없습니다!</h2>
+    <br />
+    <button>Get dog</button>
+
+    <script>
+      const getDog = async () => {
+        const result = await axios.get(
+          "https://dog.ceo/api/breeds/image/random"
+        );
+        const dog = result.data.message;
+        document.querySelector("img").setAttribute("src", dog);
+        document.querySelector("h2").innerText = "";
+      };
+
+      const btn = document.querySelector("button");
+      btn.addEventListener("click", getDog);
+    </script>
+  </body>
+</html>

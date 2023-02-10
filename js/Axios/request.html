@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>서버에서 데이터를 가져오자!</h1>
+    <button>가져오기</button>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.3.2/dist/axios.min.js"></script>
+    <script>
+      // async: 자바스크립트가 아니라 async에서는 개발자가 주도권을 갖는다고 지시해주는 것
+      // 함수 앞에 async를 잡는다. (자율주행모드에서 내가 핸들을 잡는다고 말하는 것)
+      const getData = async () => {
+        try {
+          // async를 달고 기다려야할 곳에서 await을 달아주면 된다.
+          const response = await axios.get(
+            // get: 주소에 가서 데이터를 가져와라
+            // get으로 받았을 때 html으로 주는 곳이 있고, json으로 주는 곳이 있는데, json으로 주는게 바로 rest API다.
+            "https://jsonplaceholder.typicode.com/todos"
+          );
+          // --------------------- try 내부에서 위에 먼저 실행되는게 맞지만 자바스크립트가 임의로 위의 코드가 늦어질 것 같아서 바로 아래의 console.log 를 먼저 띄워버린다.
+          // 그러는 이유, 서버 안에서 모든 내용을 다 처리 하기 전에 우선 뭐라도 화면에 보여주기 위해서
+          // 그걸 막아주는게 async, await
+          console.log(response.data); // async와 await가 없으면 여기에 걸린다, 즉 에러는 아니다. (값 반환 undefined)
+          // 자바스크립트가 아닌 외부 라이브러리가 바로 axios이다. (순수 js도 가능하기는 한데 잘 안쓴다.)
+          // 웹 하고 싶으면 response.data 뿐 아니라, response의 다른 것도 알아야 한다.
+        } catch (error) {
+          console.log(error);
+        }
+      };
+      // 이 밑은 async, await를 안 써주는 구문
+      // const getData = () => {
+      //   axios
+      //     .get("https://jsonplaceholder.typicode.com/todos")
+      //     .then((response) => {
+      //       console.log(response.data);
+      //     })
+      //     .catch((error) => {
+      //       console.log(error);
+      //     });
+      // };
+
+      const btn = document.querySelector("button");
+      btn.addEventListener("click", getData);
+    </script>
+  </body>
+</html>
