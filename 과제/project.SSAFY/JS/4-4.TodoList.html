@@ -24,6 +24,7 @@
       const ul = document.querySelector("ul");
 
       function addTodo(event) {
+        // event.preventDefault(); 를 넣어주면 submit할 때 다른 페이지로 가는걸 막아준다.
         const val = input.value;
         if (val === "") {
           alert("데이터를 입력 해주세요!");
@@ -42,6 +43,8 @@
         });
         x_btn.addEventListener("dblclick", function () {
           li.remove();
+          // 나는 target 안 쓰고 풀었는데 target을 어떻게 활용한다는거지?
+          // function () 안에 event 넣소 event.target.parentElement.remove();
         });
 
         input.value = "";
