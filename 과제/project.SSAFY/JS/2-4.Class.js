@@ -18,15 +18,18 @@ class Monster {
   }
 }
 
-// class Snake extends Monster {
-//   constructor(options) {
-//     super(health, name);
-//   }
+class Snake extends Monster {
+  constructor(options) {
+    super(options);
+    // 부모 생성자의 매개변수에 들어가는 값은 반드시 자식의 constructor와 super로 모두 받아줘야 한다.
+    // 부모 생성자에서 this로 선언해준 속성들은 재선언 하지 않아도 된다. (그래서 여기에 health와 name이 없음)
+    // 즉, this.name = options.name 이 자식 클래스에서 선언되기 위해서 constructor와 super에서 options는 받아온 반면, this.name = options.name 은 선언해 주지 않았다.
+  }
 
-//   bite(enemy) {
-//     enemy.health -= 10;
-//   }
-// }
+  bite(enemy) {
+    enemy.health -= 10;
+  }
+}
 
 // 아래 코드는 확인용 입니다.
 const conda = new Snake({ name: "conda" });
