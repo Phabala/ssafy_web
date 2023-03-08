@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      <div v-if="group1">a</div>
+      <div v-if="group1">b</div>
+      <div v-if="group1">c</div>
+      <div v-if="group2">d</div>
+      <div v-if="group2">e</div>
+      <div v-if="group3">f</div>
+      <div v-if="group3">g</div>
+      <div>
+        <button @click="run">클릭</button>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.8/dist/vue.min.js"></script>
+    <script>
+      const app = new Vue({
+        el: "#app",
+        data() {
+          return {
+            group1: true,
+            group2: false,
+            group3: false,
+          };
+        },
+        methods: {
+          run() {
+            if (this.group1 == true) {
+              this.group1 = false;
+              this.group2 = true;
+              this.group3 = false;
+            } else if (this.group2 == true) {
+              this.group1 = false;
+              this.group2 = false;
+              this.group3 = true;
+            } else if (this.group3 == true) {
+              this.group1 = true;
+              this.group2 = false;
+              this.group3 = false;
+            }
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
