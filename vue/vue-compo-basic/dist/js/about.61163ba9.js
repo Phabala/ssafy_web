@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkvue_cli_youtube"]=self["webpackChunkvue_cli_youtube"]||[]).push([[443],{5399:function(u,t,e){e.r(t),e.d(t,{default:function(){return c}});var n=function(){var u=this;u._self._c;return u._m(0)},s=[function(){var u=this,t=u._self._c;return t("div",{staticClass:"about"},[t("h1",[u._v("This is an about page")])])}],l=e(1001),i={},a=(0,l.Z)(i,n,s,!1,null,null,null),c=a.exports}}]);
+//# sourceMappingURL=about.61163ba9.js.map
